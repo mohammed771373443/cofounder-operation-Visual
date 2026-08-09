@@ -1,0 +1,9 @@
+{
+  "name": "wasla-operations-guide",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs"
+  }
+}

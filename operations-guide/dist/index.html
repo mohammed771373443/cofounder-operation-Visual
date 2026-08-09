@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#103f2e">
+  <meta name="description" content="Interactive Wasla Phase 0 business and operations guide.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Wasla Operations Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the operations guide</a>
+  <header class="site-header">
+    <a class="brand" href="#overview" aria-label="Wasla Operations Guide home"><span class="brand-mark">و</span><span><b>Wasla</b><small>Operations Guide</small></span></a>
+    <button id="menu-button" class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Guide sections">
+      <a href="#journey">Journey</a><a href="#roles">Roles</a><a href="#statuses">Statuses</a><a href="#messages">Messages</a><a href="#money">Money</a><a href="#exceptions">Exceptions</a><a href="#rules">Rules</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="overview" class="hero">
+      <div class="hero-copy"><p class="eyebrow">WASLA · وصلة · PHASE 0</p><h1>Wasla Operations Guide</h1><p class="hero-subtitle">From customer order to final delivery</p><p>This interactive guide explains how Wasla operates across the customer, Admin, store and rider journey—with WhatsApp at the communication layer and the Dashboard as the official record.</p><a class="primary-cta" href="#journey">Explore the Order Journey <span aria-hidden="true">↓</span></a></div>
+      <div class="principle-card"><span class="principle-icon">🧑‍💼</span><div><b>Human-operated. System-assisted.</b><p>Admin investigates, communicates, decides and acts. The system calculates deterministic rules, validates, timestamps and records what happened.</p></div></div>
+    </section>
+
+    <section class="core-map" aria-labelledby="core-title"><div class="section-heading"><p class="eyebrow">THE BUSINESS IN ONE VIEW</p><h2 id="core-title">Wasla stays in the middle</h2></div><div id="core-flow" class="core-flow"></div><p class="map-note">Stores and riders receive only the information needed for fulfillment. Customer and merchant do not bypass Wasla.</p></section>
+
+    <section id="journey" class="section-shell"><div class="section-heading"><p class="eyebrow">THE MAIN EXPERIENCE</p><h2>Customer to delivery</h2><p>Follow the real Phase 0 flow. Click a stage to see who has the ball, the customer-visible Arabic status, Admin work, messages and the event that moves the order.</p></div><div class="journey-toolbar"><div id="phase-filter" class="segmented" aria-label="Filter journey by phase"></div><div class="journey-actions"><button id="journey-prev">← Previous</button><span id="journey-position"></span><button id="journey-next">Next →</button></div></div><div class="journey-grid"><ol id="journey-list" class="journey-list"></ol><aside id="journey-detail" class="journey-detail" aria-live="polite"></aside></div></section>
+
+    <section id="roles" class="section-shell"><div class="section-heading"><p class="eyebrow">WHO DOES WHAT?</p><h2>Follow one role across the business</h2></div><div id="role-tabs" class="role-tabs" role="tablist"></div><div id="role-detail" class="role-detail"></div></section>
+
+    <section id="statuses" class="section-shell"><div class="section-heading"><p class="eyebrow">OFFICIAL ORDER STATES</p><h2>Order Status Map</h2><p>The Arabic label is what the customer sees. The internal code remains below for operational clarity.</p></div><div id="status-map" class="status-map"></div></section>
+
+    <section id="messages" class="section-shell"><div class="section-heading split"><div><p class="eyebrow">WHATSAPP & OPERATIONAL MESSAGES</p><h2>Message Center</h2><p>Generated or copied text never changes state. Only Admin's version-safe <b>Mark as Sent</b> declaration records the send and starts an approved timer.</p></div><span class="draft-badge">Template SOP v1.2 · Draft review</span></div><div id="message-filters" class="segmented"></div><div id="message-list" class="message-list"></div></section>
+
+    <section id="money" class="section-shell"><div class="section-heading"><p class="eyebrow">PRICING & CASH CONTROL</p><h2>How the Money Works</h2></div><div id="pricing-cards" class="pricing-cards"></div><div class="calculator"><div><h3>Price example</h3><p>Use a merchant unit price to see the approved 10% and nearest-50 half-up calculation.</p><label>Merchant unit price (YAR)<input id="merchant-price" inputmode="numeric" value="4550"></label><label>Quantity<input id="quantity" inputmode="numeric" value="2"></label></div><div id="calculation-result" class="calculation-result"></div></div><h3 class="subheading">Money flow by payment method</h3><div id="money-tabs" class="segmented"></div><div id="money-flow" class="money-flow"></div></section>
+
+    <section id="timers" class="section-shell"><div class="section-heading"><p class="eyebrow">OPERATING TIME</p><h2>Deadlines that alert—never auto-decide</h2></div><div id="timer-list" class="timer-list"></div></section>
+
+    <section id="exceptions" class="section-shell"><div class="section-heading"><p class="eyebrow">WHEN THINGS GO WRONG</p><h2>Common exception paths</h2><p>Normal operations remain dominant. For unusual cases: stop if necessary → contact Admin → Admin decides → record the material outcome.</p></div><div id="exception-filters" class="segmented"></div><div id="exception-list" class="exception-list"></div></section>
+
+    <section id="follow-order" class="section-shell sample-section"><div class="section-heading"><p class="eyebrow">INTERACTIVE EXAMPLE</p><h2>Follow fictional order #WS-1042</h2><p>The names and amounts are fictional; every operational rule is real.</p></div><div class="sample-layout"><div id="sample-progress" class="sample-progress"></div><div id="sample-card" class="sample-card"></div></div><div class="sample-actions"><button id="sample-reset">Start over</button><button id="sample-next" class="primary-button">Start order →</button></div></section>
+
+    <section id="perspectives" class="section-shell"><div class="section-heading"><p class="eyebrow">CONNECTED EXPERIENCES</p><h2>What each participant experiences</h2></div><div id="perspective-grid" class="perspective-grid"></div></section>
+
+    <section id="dashboard" class="section-shell"><div class="section-heading"><p class="eyebrow">THE OPERATIONS CONSOLE</p><h2>What the Admin Dashboard does</h2></div><div id="dashboard-grid" class="dashboard-grid"></div><div class="record-strip"><div><b>One official record</b><span>Order, latest approved revision and current state</span></div><div><b>One immutable history</b><span>Actor, action, time, version and evidence</span></div><div><b>Safe shared queue</b><span>No shift owner; stale actions are rejected</span></div></div></section>
+
+    <section id="rules" class="section-shell"><div class="section-heading"><p class="eyebrow">QUICK REFERENCE</p><h2>Phase 0 Rules</h2></div><div id="rules-grid" class="rules-grid"></div></section>
+
+    <section id="review" class="review-panel"><div><p class="eyebrow">NEEDS COFOUNDER REVIEW</p><h2>Known open or conflicting items</h2></div><div id="review-list"></div></section>
+  </main>
+
+  <footer><div><b>Wasla Operations Guide</b><span>Static cofounder reference · Last synthesized 10 Aug 2026</span></div><button id="sources-button">View source documents</button></footer>
+  <dialog id="sources-dialog"><div class="dialog-head"><h2>Source documents</h2><button data-close-dialog aria-label="Close">×</button></div><div id="source-list"></div><button class="dialog-close" data-close-dialog>Close</button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="content.js"></script><script src="app.js"></script>
+</body>
+</html>
